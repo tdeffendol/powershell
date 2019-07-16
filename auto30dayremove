@@ -1,0 +1,112 @@
+#EVTLab auto remove raw data files older than 30 days with logging of removed files.
+#Written by Tracy 2/22/16
+#Implemented: 02/23/16, ScheduledTask: EVTLab_RemoveRawDate30Days 
+#Will update in future to include cleaning all files within directories without having each directory listed.
+
+#CHOICEPOINT
+start-transcript "C:\Program Files\EVTLab\Archive\AutoRemoveLogs\$(get-date -format MMddyyHHmmss)_autoarchive.txt"
+$Path = "C:\Program Files\EVTLab\Archive\ChoicePoint"
+$Daysback = "-30"
+$CurrentDate = Get-Date
+$DatetoDelete = $CurrentDate.AddDays($Daysback)
+Get-ChildItem $Path | Where-Object { $_.LastWriteTime -lt $DatetoDelete } | Remove-Item -Verbose
+stop-transcript
+
+#COMPRES
+start-transcript "C:\Program Files\EVTLab\Archive\AutoRemoveLogs\$(get-date -format MMddyyHHmmss)_autoarchive.txt"
+$Path = "C:\Program Files\EVTLab\Archive\COMPRES"
+$Daysback = "-30"
+$CurrentDate = Get-Date
+$DatetoDelete = $CurrentDate.AddDays($Daysback)
+Get-ChildItem $Path | Where-Object { $_.LastWriteTime -lt $DatetoDelete } | Remove-Item -Verbose
+stop-transcript
+
+#CORPCARE
+start-transcript "C:\Program Files\EVTLab\Archive\AutoRemoveLogs\$(get-date -format MMddyyHHmmss)_autoarchive.txt"
+$Path = "C:\Program Files\EVTLab\Archive\CORPCARE"
+$Daysback = "-30"
+$CurrentDate = Get-Date
+$DatetoDelete = $CurrentDate.AddDays($Daysback)
+Get-ChildItem $Path | Where-Object { $_.LastWriteTime -lt $DatetoDelete } | Remove-Item -Verbose
+stop-transcript
+
+#CRL
+start-transcript "C:\Program Files\EVTLab\Archive\AutoRemoveLogs\$(get-date -format MMddyyHHmmss)_autoarchive.txt"
+$Path = "C:\Program Files\EVTLab\Archive\CRL"
+$Daysback = "-30"
+$CurrentDate = Get-Date
+$DatetoDelete = $CurrentDate.AddDays($Daysback)
+Get-ChildItem $Path | Where-Object { $_.LastWriteTime -lt $DatetoDelete } | Remove-Item -Verbose
+stop-transcript
+
+#DRS
+start-transcript "C:\Program Files\EVTLab\Archive\AutoRemoveLogs\$(get-date -format MMddyyHHmmss)_autoarchive.txt"
+$Path = "C:\Program Files\EVTLab\Archive\DRS"
+$Daysback = "-30"
+$CurrentDate = Get-Date
+$DatetoDelete = $CurrentDate.AddDays($Daysback)
+Get-ChildItem $Path | Where-Object { $_.LastWriteTime -lt $DatetoDelete } | Remove-Item -Verbose
+stop-transcript
+
+#GEISINGER
+start-transcript "C:\Program Files\EVTLab\Archive\AutoRemoveLogs\$(get-date -format MMddyyHHmmss)_autoarchive.txt"
+$Path = "C:\Program Files\EVTLab\Archive\GEISINGER"
+$Daysback = "-30"
+$CurrentDate = Get-Date
+$DatetoDelete = $CurrentDate.AddDays($Daysback)
+Get-ChildItem $Path | Where-Object { $_.LastWriteTime -lt $DatetoDelete } | Remove-Item -Verbose
+stop-transcript
+
+#KROLL
+start-transcript "C:\Program Files\EVTLab\Archive\AutoRemoveLogs\$(get-date -format MMddyyHHmmss)_autoarchive.txt"
+$Path = "C:\Program Files\EVTLab\Archive\Kroll Labs"
+$Daysback = "-30"
+$CurrentDate = Get-Date
+$DatetoDelete = $CurrentDate.AddDays($Daysback)
+Get-ChildItem $Path | Where-Object { $_.LastWriteTime -lt $DatetoDelete } | Remove-Item -Verbose
+stop-transcript
+
+#MEDTOX
+start-transcript "C:\Program Files\EVTLab\Archive\AutoRemoveLogs\$(get-date -format MMddyyHHmmss)_autoarchive.txt"
+$Path = "C:\Program Files\EVTLab\Archive\MEDTOX"
+$Daysback = "-30"
+$CurrentDate = Get-Date
+$DatetoDelete = $CurrentDate.AddDays($Daysback)
+Get-ChildItem $Path | Where-Object { $_.LastWriteTime -lt $DatetoDelete } | Remove-Item -Verbose
+stop-transcript
+
+#NMR
+start-transcript "C:\Program Files\EVTLab\Archive\AutoRemoveLogs\$(get-date -format MMddyyHHmmss)_autoarchive.txt"
+$Path = "C:\Program Files\EVTLab\Archive\NMR"
+$Daysback = "-30"
+$CurrentDate = Get-Date
+$DatetoDelete = $CurrentDate.AddDays($Daysback)
+Get-ChildItem $Path | Where-Object { $_.LastWriteTime -lt $DatetoDelete } | Remove-Item -Verbose
+stop-transcript
+
+#OAKLANDMRO
+start-transcript "C:\Program Files\EVTLab\Archive\AutoRemoveLogs\$(get-date -format MMddyyHHmmss)_autoarchive.txt"
+$Path = "C:\Program Files\EVTLab\Archive\OAKLANDMRO"
+$Daysback = "-30"
+$CurrentDate = Get-Date
+$DatetoDelete = $CurrentDate.AddDays($Daysback)
+Get-ChildItem $Path | Where-Object { $_.LastWriteTime -lt $DatetoDelete } | Remove-Item -Verbose
+stop-transcript
+
+#PAML
+start-transcript "C:\Program Files\EVTLab\Archive\AutoRemoveLogs\$(get-date -format MMddyyHHmmss)_autoarchive.txt"
+$Path = "C:\Program Files\EVTLab\Archive\PAML"
+$Daysback = "-30"
+$CurrentDate = Get-Date
+$DatetoDelete = $CurrentDate.AddDays($Daysback)
+Get-ChildItem $Path | Where-Object { $_.LastWriteTime -lt $DatetoDelete } | Remove-Item -Verbose
+stop-transcript
+
+#UNIVSVC
+start-transcript "C:\Program Files\EVTLab\Archive\AutoRemoveLogs\$(get-date -format MMddyyHHmmss)_autoarchive.txt"
+$Path = "C:\Program Files\EVTLab\Archive\UNIVSVC"
+$Daysback = "-30"
+$CurrentDate = Get-Date
+$DatetoDelete = $CurrentDate.AddDays($Daysback)
+Get-ChildItem $Path | Where-Object { $_.LastWriteTime -lt $DatetoDelete } | Remove-Item -Verbose
+stop-transcript
