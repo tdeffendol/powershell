@@ -1,4 +1,4 @@
-$Mac = "E0:D5:5e:A4:E0:56"
+$Mac = "A0:A5:2e:B4:H0:56"
 #macaddress of machine you want to turn on
 $MacByteArray = $Mac -split "[:-]" | ForEach-Object { [Byte] "0x$_"}
 [Byte[]] $MagicPacket = (,0xFF * 6) + ($MacByteArray  * 16)
